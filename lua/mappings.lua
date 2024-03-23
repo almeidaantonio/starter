@@ -4,7 +4,21 @@ require "nvchad.mappings"
 
 local map = vim.keymap.set
 
-map("n", ";", ":", { desc = "CMD enter command mode" })
-map("i", "jk", "<ESC>")
 
--- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
+map({"n", "v"}, "<C-z>", "u"    , {desc = "undo"                         })
+map({"n", "v"}, "<C-y>", "<C-r>", {desc = "redo"                         })
+map({"n", "v"}, "x"    , "\"_x" , {desc = "erase char"                   })
+map({"n", "v"}, "X"    , "\"_x" , {desc = "erase char"                   })
+map({"n", "v"}, "<Del>", "\"_d" , {desc = "delete char"                  })
+map({"n", "v"}, "d"    , "\"_d" , {desc = "delete char"                  })
+map({"n", "v"}, "dd"   , "\"_dd", {desc = "delete line"                  })
+map({"n", "v"}, "D"    , "\"_D" , {desc = "delete until the end of line" })
+
+map("n", "<PageUp>"  , "<C-u> 0zz"            , {desc = "scroll up"             })
+map("n", "<PageDown>", "<C-d> 0zz"            , {desc = "scroll down"           })
+map("n", "<A-Left>"  , "<C-w>h"               , {desc = "Window left"           })
+map("n", "<A-Right>" , "<C-w>l"               , {desc = "Window right"          })
+map("n", "<A-Down>"  , "<C-w>j"               , {desc = "Window down"           })
+map("n", "<A-Up>"    , "<C-w>k"               , {desc = "Window up"             })
+map("n", "<leader>gc", "<cmd> Git commit<CR>" , {desc = "fugitive 'git commit'" })
+map("n", "<leader>gs", "<cmd> Git<CR>"        , {desc = "fugitive"              })

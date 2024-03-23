@@ -6,8 +6,25 @@ return {
       require "configs.conform"
     end,
   },
+   {
+    "mhartington/formatter.nvim",
+    event = "VeryLazy",
+    opts = function ()
+      return require "configs.formatter"
+    end,
+  },
+  {
+    "tpope/vim-fugitive",
+    lazy = false,
+  },
+  {
+    "nvim-tree/nvim-tree.lua",
+    opts = function()
+      return require "configs.nvimtree"
+    end,
+    lazy = false,
+  },
 
-  -- These are some examples, uncomment them if you want to see them work!
   -- {
   --   "neovim/nvim-lspconfig",
   --   config = function()
