@@ -1,7 +1,7 @@
 local M = {
   filetype = {
     go = {
-      require("formatter.filetypes.typescript").gofmt
+      require("formatter.filetypes.go").gofmt
     },
     ["*"] = {
       require("formatter.filetypes.any").remove_trailing_whitespace

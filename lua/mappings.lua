@@ -4,7 +4,6 @@ require "nvchad.mappings"
 
 local map = vim.keymap.set
 
-
 map({"n", "v"}, "<C-z>", "u"    , {desc = "undo"                         })
 map({"n", "v"}, "<C-y>", "<C-r>", {desc = "redo"                         })
 map({"n", "v"}, "x"    , "\"_x" , {desc = "erase char"                   })
@@ -22,3 +21,5 @@ map("n", "<A-Down>"  , "<C-w>j"               , {desc = "Window down"           
 map("n", "<A-Up>"    , "<C-w>k"               , {desc = "Window up"             })
 map("n", "<leader>gc", "<cmd> Git commit<CR>" , {desc = "fugitive 'git commit'" })
 map("n", "<leader>gs", "<cmd> Git<CR>"        , {desc = "fugitive"              })
+map("n", "<C-Up>"    , "# zz"                 , {desc = "find word above"       })
+map("n", "<C-Down>"  , "* zz"                 , {desc = "find word below"       })
