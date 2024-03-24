@@ -25,13 +25,14 @@ return {
     lazy = false,
   },
 
-  -- {
-  --   "neovim/nvim-lspconfig",
-  --   config = function()
-  --     require("nvchad.configs.lspconfig").defaults()
-  --     require "configs.lspconfig"
-  --   end,
-  -- },
+  {
+    "neovim/nvim-lspconfig",
+    config = function()
+      require("nvchad.configs.lspconfig").defaults()
+      require "configs.lspconfig"
+    end,
+    lazy = false,
+  },
 
   {
   	"williamboman/mason.nvim",
@@ -39,6 +40,7 @@ return {
   		ensure_installed = {
   			"lua-language-server",
   			"gopls",
+        "goimports",
   		},
   	},
   },
