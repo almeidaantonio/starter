@@ -24,7 +24,6 @@ return {
     end,
     lazy = false,
   },
-
   {
     "neovim/nvim-lspconfig",
     config = function()
@@ -33,7 +32,6 @@ return {
     end,
     lazy = false,
   },
-
   {
   	"williamboman/mason.nvim",
   	opts = {
@@ -41,10 +39,12 @@ return {
   			"lua-language-server",
   			"gopls",
         "goimports",
+        "pyright",
+        "omnisharp",
+        "csharpier",
   		},
   	},
   },
-
   {
   	"nvim-treesitter/nvim-treesitter",
   	opts = {
@@ -58,4 +58,8 @@ return {
   		},
   	},
   },
+  {
+    "jidn/vim-dbml",
+    lazy = false,
+  }
 }
