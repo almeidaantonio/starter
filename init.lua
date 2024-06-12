@@ -45,3 +45,5 @@ autocmd("bufenter", {
 })
 
 vim.wo.relativenumber = true
+
+require("configs.dotwrapper").setup()
