@@ -23,3 +23,78 @@ map("n", "<leader>gc", "<cmd> Git commit<CR>" , {desc = "fugitive 'git commit'" 
 map("n", "<leader>gs", "<cmd> Git<CR>"        , {desc = "fugitive"              })
 map("n", "<C-Up>"    , "# zz"                 , {desc = "find word above"       })
 map("n", "<C-Down>"  , "* zz"                 , {desc = "find word below"       })
+
+-- Copilot
+map(
+  "i",
+  "<C-]>",
+  function()
+    vim.fn.feedkeys(vim.fn['copilot#Accept'](), '')
+  end,
+  {
+    desc = "Copilot Accept",
+    nowait = true,
+    silent = true,
+    expr = true,
+  }
+)
+
+map(
+  "i",
+  "<C-\\>",
+  "<Plug>(copilot-accept-word)",
+  {
+    desc = "Copilot Accept",
+    nowait = true,
+    silent = true,
+    expr = true,
+  }
+)
+
+map(
+  "i",
+  "<C-|>",
+  "<Plug>(copilot-accept-line)",
+  {
+    desc = "Copilot Accept Line",
+    nowait = true,
+    silent = true,
+    expr = true,
+  }
+)
+
+map(
+  "i",
+  "<A-.>",
+  "<Plug>(copilot-suggest)",
+  {
+    desc = "Copilot Suggest",
+    nowait = true,
+    silent = true,
+    expr = true,
+  }
+)
+
+map(
+  "i",
+  "<A-Down>",
+  "<Plug>(copilot-next)",
+  {
+    desc = "Copilot Next",
+    nowait = true,
+    silent = true,
+    expr = true,
+  }
+)
+
+map(
+  "i",
+  "<A-Up>",
+  "<Plug>(copilot-previous)",
+  {
+    desc = "Copilot Previous",
+    nowait = true,
+    silent = true,
+    expr = true,
+  }
+)

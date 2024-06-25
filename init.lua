@@ -46,4 +46,15 @@ autocmd("bufenter", {
 
 vim.wo.relativenumber = true
 
-require("configs.dotwrapper").setup()
+vim.api.nvim_create_autocmd("BufEnter", {
+  pattern = {
+    "*.py",
+    "*.cs",
+    "*.md",
+  },
+  command = "setlocal tabstop=4 shiftwidth=4 expandtab"
+})
+
+-- Copilot setup.
+vim.g.copilot_no_tab_map = true
+vim.g.copilot_assume_mapped = true
